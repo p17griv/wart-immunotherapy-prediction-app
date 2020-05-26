@@ -4,6 +4,8 @@ method for their patients. Based on the given information about the patient - ag
 type of warts, surface area of the biggest wart and induration diameter of initial test- the app predicts
 the result of the of the treatment.
 
+![Image of the App](https://github.com/p17griv/wart-immunotherapy-prediction-app/blob/master/app_sample.jpg)
+
 #### Dataset
 used for training and testing the model: https://archive.ics.uci.edu/ml/datasets/Immunotherapy+Dataset
 
