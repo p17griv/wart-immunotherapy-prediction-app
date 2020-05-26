@@ -1,8 +1,8 @@
 ### Wart Immunotherapy Prediction 
 is a medical decision support system helping doctors decide whether Immunotherapy is the right treatment 
-method for their patients. Based on the given information about the patient - age, gender, number of warts,
-type of warts, surface area of the biggest wart and induration diameter of initial test - the app predicts
-the result of the of the treatment.
+method for their patients. Based on the given information about the patient - age, gender, time before treatment,
+number of warts, type of warts, surface area of the biggest wart and induration diameter of initial test - the app 
+predicts the result of the of the treatment.
 
 ### Download the APK
 for Android 4.3 Jelly Bean or newer version [here](https://github.com/p17griv/wart-immunotherapy-prediction-app/blob/master/wart_immunotherapy_prediction.apk).
