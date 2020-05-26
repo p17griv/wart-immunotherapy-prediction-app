@@ -17,6 +17,7 @@ public class DatabaseHelper extends SQLiteOpenHelper {
     public static final String Col_6 = "surfaceArea";
     public static final String Col_7 = "indurationDiameter";
     public static final String Col_8 = "dateAndTime";
+    public static final String Col_9 = "time";
 
     public DatabaseHelper(Context context)
     {
@@ -27,7 +28,7 @@ public class DatabaseHelper extends SQLiteOpenHelper {
     @Override
     public void onCreate(SQLiteDatabase db) {
         db.execSQL("create table " + TableName + " (ID INTEGER PRIMARY KEY AUTOINCREMENT, age INTEGER, gender VARCHAR(20)," +
-                "numberOfWarts INTEGER, typeOfWarts VARCHAR(20), surfaceArea INTEGER, indurationDiameter INTEGER, dateAndTime VARCHAR(20))");
+                "numberOfWarts INTEGER, typeOfWarts VARCHAR(20), surfaceArea INTEGER, indurationDiameter INTEGER, dateAndTime VARCHAR(20), time INTEGER)");
     }
 
     //Delete entire Table
@@ -46,7 +47,7 @@ public class DatabaseHelper extends SQLiteOpenHelper {
     }
 
     //Insert into table
-    public boolean insertData(int age, String gender, int numberOfWarts, String typeOfWarts, int surfaceArea, int indurationDiameter, String dateAndTime)
+    public boolean insertData(int age, String gender, int numberOfWarts, String typeOfWarts, int surfaceArea, int indurationDiameter, String dateAndTime, int time)
     {
         SQLiteDatabase db = this.getWritableDatabase();
         ContentValues cv = new ContentValues();
@@ -57,6 +58,7 @@ public class DatabaseHelper extends SQLiteOpenHelper {
         cv.put(Col_6,surfaceArea);
         cv.put(Col_7,indurationDiameter);
         cv.put(Col_8,dateAndTime);
+        cv.put(Col_9,time);
 
         long res = db.insert(TableName,null,cv);
         if(res==-1)
