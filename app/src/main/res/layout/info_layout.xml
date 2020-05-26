@@ -23,12 +23,12 @@
             android:paddingTop="20dp"
             android:text="Wart Immunotherapy Prediction is a medical decision support system
 helping doctors decide whether Immunotherapy is the right treatment method for their patients.\n\n
-Based on the given information about the patient - age, gender, number of warts, type of warts,
+Based on the given information about the patient - age, gender, time before treatment, number of warts, type of warts,
 surface area of the biggest wart and induration diameter - the app predicts the result of the
 of the treatment.
 \n\n---DISCLAIMER---\n\n
 The final decision should not be 100% based on the app's prediction!\n
-The app's accuracy is 63.1% and is correctly predicting A* 73.7% and B** 52.6% of time.
+The app's accuracy is 76.3% and is correctly predicting A* 68.4% and B** 84.2% of time.
 \n\n * Immunotherapy is the right method cases.\n
 ** Immunotherapy is not the right method cases.\n\n\n
 Made by:\n
