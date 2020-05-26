@@ -4,6 +4,9 @@ method for their patients. Based on the given information about the patient - ag
 type of warts, surface area of the biggest wart and induration diameter of initial test- the app predicts
 the result of the of the treatment.
 
+### Download the APK
+for Android 4.3 Jelly Bean or newer version [here](https://github.com/p17griv/wart-immunotherapy-prediction-app/blob/master/wart_immunotherapy_prediction.apk).
+
 ![Image of the App](https://github.com/p17griv/wart-immunotherapy-prediction-app/blob/master/app_sample.png)
 
 #### Dataset
