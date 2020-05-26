@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<animation-list xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:drawable="@drawable/pot1" android:duration="50"/>
+    <item android:drawable="@drawable/pot2" android:duration="50"/>
+    <item android:drawable="@drawable/pot3" android:duration="50"/>
+    <item android:drawable="@drawable/pot4" android:duration="50"/>
+    <item android:drawable="@drawable/pot5" android:duration="50"/>
+    <item android:drawable="@drawable/pot6" android:duration="50"/>
+    <item android:drawable="@drawable/pot7" android:duration="50"/>
+    <item android:drawable="@drawable/pot8" android:duration="50"/>
+    <item android:drawable="@drawable/pot9" android:duration="50"/>
+    <item android:drawable="@drawable/pot10" android:duration="50"/>
+    <item android:drawable="@drawable/pot11" android:duration="50"/>
+    <item android:drawable="@drawable/pot12" android:duration="50"/>
+    <item android:drawable="@drawable/pot13" android:duration="50"/>
+    <item android:drawable="@drawable/pot14" android:duration="50"/>
+    <item android:drawable="@drawable/pot15" android:duration="50"/>
+    <item android:drawable="@drawable/pot16" android:duration="50"/>
+    <item android:drawable="@drawable/pot17" android:duration="50"/>
+    <item android:drawable="@drawable/pot18" android:duration="50"/>
+    <item android:drawable="@drawable/pot19" android:duration="50"/>
+    <item android:drawable="@drawable/pot20" android:duration="50"/>
+    <item android:drawable="@drawable/pot21" android:duration="50"/>
+    <item android:drawable="@drawable/pot22" android:duration="50"/>
+    <item android:drawable="@drawable/pot23" android:duration="50"/>
+    <item android:drawable="@drawable/pot24" android:duration="50"/>
+    <item android:drawable="@drawable/pot25" android:duration="50"/>
+</animation-list>
