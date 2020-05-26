@@ -15,7 +15,7 @@ used for training and testing the model: https://archive.ics.uci.edu/ml/datasets
 #### ---DISCLAIMER---
 <b>The final decision should not be 100% based on the app's prediction!</b>
 
-The app's accuracy is 63.1% and is correctly predicting A* 73.7% and B** 52.6% of time.
+The app's accuracy is 76.3% and is correctly predicting A* 68.4% and B** 84.2% of time.
 
 *Immunotherapy is the right method cases.
 
