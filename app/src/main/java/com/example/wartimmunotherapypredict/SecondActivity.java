@@ -33,7 +33,7 @@ public class SecondActivity extends AppCompatActivity {
     DatabaseHelper HistoryDb;
 
     int currentQuery;
-    int age, numberOfWarts, surfaceAreaOfWart, indurationDiameterOfWart;
+    int age, numberOfWarts, surfaceAreaOfWart, indurationDiameterOfWart, time;
     String gender, typeOfWart, rsult, dateAndTime;
     ImageView potImageView;
 
@@ -49,6 +49,7 @@ public class SecondActivity extends AppCompatActivity {
 
     TableLayout query1Table;
     TableLayout query2Table;
+    TableLayout query25Table;
     TableLayout query3Table;
     TableLayout query4Table;
     TableLayout query5Table;
@@ -78,6 +79,7 @@ public class SecondActivity extends AppCompatActivity {
         //Layouts
         query1Table = (TableLayout) findViewById(R.id.query1Table);
         query2Table = (TableLayout) findViewById(R.id.query2Table);
+        query25Table = (TableLayout) findViewById(R.id.query25Table);
         query3Table = (TableLayout) findViewById(R.id.query3Table);
         query4Table = (TableLayout) findViewById(R.id.query4Table);
         query5Table = (TableLayout) findViewById(R.id.query5Table);
@@ -181,8 +183,8 @@ public class SecondActivity extends AppCompatActivity {
         {
             nextBtn.setVisibility(View.VISIBLE);
             submitBtn.setVisibility(View.GONE);
-            queryCountTextView.setText("Query 1/6");
-            queryProgressBar.setProgress(20);
+            queryCountTextView.setText("Query 1/7");
+            queryProgressBar.setProgress(14);
             query1Table.setVisibility(View.VISIBLE);
             query2Table.setVisibility(View.GONE);
 
@@ -197,11 +199,11 @@ public class SecondActivity extends AppCompatActivity {
             nextBtn.setVisibility(View.VISIBLE);
             preBtn.setVisibility(View.VISIBLE);
             submitBtn.setVisibility(View.GONE);
-            queryCountTextView.setText("Query 2/6");
-            queryProgressBar.setProgress(35);
+            queryCountTextView.setText("Query 2/7");
+            queryProgressBar.setProgress(28);
             query1Table.setVisibility(View.GONE);
             query2Table.setVisibility(View.VISIBLE);
-            query3Table.setVisibility(View.GONE);
+            query25Table.setVisibility(View.GONE);
 
             SeekBar query2SeekBar = (SeekBar) findViewById(R.id.query2SeekBar);
             query2SeekBar.setProgressTintList(ColorStateList.valueOf(Color.parseColor("#982c2c")));
@@ -233,14 +235,115 @@ public class SecondActivity extends AppCompatActivity {
                 }
             });
         }
-        else if(currentQuery == 3) //Get number of warts
+        else if(currentQuery == 3) //Get time
+        {
+            nextBtn.setVisibility(View.VISIBLE);
+            preBtn.setVisibility(View.VISIBLE);
+            submitBtn.setVisibility(View.GONE);
+            queryCountTextView.setText("Query 3/7");
+            queryProgressBar.setProgress(42);
+            query2Table.setVisibility(View.GONE);
+            query25Table.setVisibility(View.VISIBLE);
+            query3Table.setVisibility(View.GONE);
+
+            SeekBar query25SeekBar = (SeekBar) findViewById(R.id.query25SeekBar);
+            query25SeekBar.setProgressTintList(ColorStateList.valueOf(Color.parseColor("#982c2c")));
+            query25SeekBar.getThumb().setColorFilter(Color.parseColor("#982c2c"), PorterDuff.Mode.SRC_IN);
+
+            final TextView seekBarTextView2 = (TextView) findViewById(R.id.seekBar2textView);
+            time = 6;
+            query25SeekBar.setOnSeekBarChangeListener(new SeekBar.OnSeekBarChangeListener() {
+                @Override
+                public void onProgressChanged(SeekBar seekBar, int progress, boolean fromUser) {
+                    if(progress <= 7)
+                    {
+                        seekBarTextView2.setText("<1");
+                        time = 0;
+                    }
+                    else if(progress > 7 && progress <= 14)
+                    {
+                        seekBarTextView2.setText("1");
+                        time = 1;
+                    }
+                    else if(progress > 14 && progress <= 21)
+                    {
+                        seekBarTextView2.setText("2");
+                        time = 2;
+                    }
+                    else if(progress > 21 && progress <= 28)
+                    {
+                        seekBarTextView2.setText("3");
+                        time = 3;
+                    }
+                    else if(progress > 28 && progress <= 35)
+                    {
+                        seekBarTextView2.setText("4");
+                        time = 4;
+                    }
+                    else if(progress > 35 && progress <= 42)
+                    {
+                        seekBarTextView2.setText("5");
+                        time = 5;
+                    }
+                    else if(progress > 42 && progress <= 49)
+                    {
+                        seekBarTextView2.setText("6");
+                        time = 6;
+                    }
+                    if(progress > 49 && progress <= 56)
+                    {
+                        seekBarTextView2.setText("7");
+                        time = 7;
+                    }
+                    else if(progress > 56 && progress <= 63)
+                    {
+                        seekBarTextView2.setText("8");
+                        time = 8;
+                    }
+                    else if(progress > 63 && progress <= 70)
+                    {
+                        seekBarTextView2.setText("9");
+                        time = 9;
+                    }
+                    else if(progress > 70 && progress <= 77)
+                    {
+                        seekBarTextView2.setText("10");
+                        time = 10;
+                    }
+                    else if(progress > 77 && progress <= 84)
+                    {
+                        seekBarTextView2.setText("11");
+                        time = 11;
+                    }
+                    else if(progress > 84 && progress <= 91)
+                    {
+                        seekBarTextView2.setText("12");
+                        time = 12;
+                    }
+                    else if(progress > 91 && progress <= 100)
+                    {
+                        seekBarTextView2.setText(">12");
+                        time = 13;
+                    }
+                }
+
+                @Override
+                public void onStartTrackingTouch(SeekBar seekBar) {
+                }
+
+                @Override
+                public void onStopTrackingTouch(SeekBar seekBar) {
+                }
+            });
+        }
+        else if(currentQuery == 4) //Get number of warts
         {
             nextBtn.setVisibility(View.GONE);
             submitBtn.setVisibility(View.VISIBLE);
-            queryCountTextView.setText("Query 3/6");
-            queryProgressBar.setProgress(45);
+            queryCountTextView.setText("Query 4/7");
+            queryProgressBar.setProgress(56);
             query3Table.setVisibility(View.VISIBLE);
-            query2Table.setVisibility(View.GONE);
+            query25Table.setVisibility(View.GONE);
             query4Table.setVisibility(View.GONE);
 
             final EditText numberInput = (EditText) findViewById(R.id.numberInput);
@@ -272,12 +375,12 @@ public class SecondActivity extends AppCompatActivity {
                 }
             });
         }
-        else if(currentQuery == 4) //Get type of warts
+        else if(currentQuery == 5) //Get type of warts
         {
             nextBtn.setVisibility(View.VISIBLE);
             submitBtn.setVisibility(View.GONE);
-            queryCountTextView.setText("Query 4/6");
-            queryProgressBar.setProgress(60);
+            queryCountTextView.setText("Query 5/7");
+            queryProgressBar.setProgress(70);
             query3Table.setVisibility(View.GONE);
             query4Table.setVisibility(View.VISIBLE);
             query5Table.setVisibility(View.GONE);
@@ -292,12 +395,12 @@ public class SecondActivity extends AppCompatActivity {
             else
                 typeOfWart = "both";
         }
-        else if(currentQuery == 5) //Get surface area of wart
+        else if(currentQuery == 6) //Get surface area of wart
         {
             nextBtn.setVisibility(View.GONE);
             submitBtn.setVisibility(View.VISIBLE);
-            queryCountTextView.setText("Query 5/6");
-            queryProgressBar.setProgress(75);
+            queryCountTextView.setText("Query 6/7");
+            queryProgressBar.setProgress(84);
             query4Table.setVisibility(View.GONE);
             query5Table.setVisibility(View.VISIBLE);
             query6Table.setVisibility(View.GONE);
@@ -331,12 +434,12 @@ public class SecondActivity extends AppCompatActivity {
                 }
             });
         }
-        else if(currentQuery == 6) //Get induration diameter
+        else if(currentQuery == 7) //Get induration diameter
         {
             nextBtn.setVisibility(View.GONE);
             submitBtn.setVisibility(View.VISIBLE);
-            queryCountTextView.setText("Query 6/6");
-            queryProgressBar.setProgress(90);
+            queryCountTextView.setText("Query 7/7");
+            queryProgressBar.setProgress(98);
             query5Table.setVisibility(View.GONE);
             query6Table.setVisibility(View.VISIBLE);
             resultTable.setVisibility(View.GONE);
@@ -407,7 +510,7 @@ public class SecondActivity extends AppCompatActivity {
         saveBtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                if(HistoryDb.insertData(age, gender, numberOfWarts, typeOfWart, surfaceAreaOfWart, indurationDiameterOfWart, dateAndTime))
+                if(HistoryDb.insertData(age, gender, numberOfWarts, typeOfWart, surfaceAreaOfWart, indurationDiameterOfWart, dateAndTime, time))
                     Toast.makeText(SecondActivity.this, "Results saved successfully!", Toast.LENGTH_LONG).show();
                 saveBtn.setEnabled(false);
             }
@@ -455,6 +558,7 @@ public class SecondActivity extends AppCompatActivity {
                     sb.append("Prediction on: \n" + res.getString(res.getColumnIndex("dateAndTime"))
                     + "\nAge: " + res.getInt(res.getColumnIndex("age"))
                     + "\nGender: " + res.getString(res.getColumnIndex("gender"))
+                    + "\nTime before treatment: " + res.getInt(res.getColumnIndex("time"))
                     + "\nNumber of Warts: " + res.getInt(res.getColumnIndex("numberOfWarts"))
                     + "\nType of Warts: " + res.getString(res.getColumnIndex("typeOfWarts"))
                     + "\nSurface Area: " + res.getInt(res.getColumnIndex("surfaceArea"))
@@ -495,6 +599,7 @@ public class SecondActivity extends AppCompatActivity {
         result.setText(
                 "Age: " + age + "\n"
                         + "Gender: " + gender + "\n"
+                        + "Time before treatment: " + time + "\n"
                         + "# of warts: " + numberOfWarts + "\n"
                         + "Type: " + typeOfWart + "\n"
                         + "Surface area: " + surfaceAreaOfWart + "\n"
@@ -503,7 +608,7 @@ public class SecondActivity extends AppCompatActivity {
                         + "\nResult:\n" + rsult
                         + "\n\n---DISCLAIMER---\n\n"
                         + "The final decision should not be 100%\n based on the app's prediction!\n"
-                        + "The app's accuracy is 63.1% and is\n correctly predicting \nA* 73.7% and B** 52.6% of time."
+                        + "The app's accuracy is 76.3% and is\n correctly predicting \nA* 68.4% and B** 84.2% of time."
                         + "\n\n * Immunotherapy is the right method cases.\n"
                         + "** Immunotherapy is not the right method cases.");
     }
@@ -516,41 +621,18 @@ public class SecondActivity extends AppCompatActivity {
 
     public String makePrediction()
     {
-        if(indurationDiameterOfWart <= 3)
+        if(time > 10)
             return "Immunotherapy will cure warts!";
         else
         {
             if(typeOfWart.equals("common"))
-            {
-                if(gender.equals("male"))
-                {
-                    if(indurationDiameterOfWart <= 6)
-                        return "Immunotherapy\n is not the right method to cure warts!";
-                    else
-                    {
-                        if(surfaceAreaOfWart <= 50)
-                            return "Immunotherapy\n is not the right method to cure warts!";
-                        else
-                            return "Immunotherapy will cure warts!";
-                    }
-                }
-                else
-                if(numberOfWarts <= 5)
-                    return "Immunotherapy will cure warts!";
-                else
-                {
-                    if(indurationDiameterOfWart <= 8)
-                        return "Immunotherapy will cure warts!";
-                    else
-                        return "Immunotherapy\n is not the right method to cure warts!";
-                }
-            }
+                return "Immunotherapy\n is not the right method to cure warts!";
             else if(typeOfWart.equals("plantar"))
             {
                 if(indurationDiameterOfWart <= 9)
-                    return "Immunotherapy\n is not the right method to cure warts!";
-                else
                     return "Immunotherapy will cure warts!";
+                else
+                    return "Immunotherapy\n is not the right method to cure warts!";
             }
             else
                 return "Immunotherapy\n is not the right method to cure warts!";
