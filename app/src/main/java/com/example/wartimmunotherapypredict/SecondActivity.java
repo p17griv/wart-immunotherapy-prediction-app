@@ -510,7 +510,7 @@ public class SecondActivity extends AppCompatActivity {
         saveBtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                if(HistoryDb.insertData(age, gender, numberOfWarts, typeOfWart, surfaceAreaOfWart, indurationDiameterOfWart, dateAndTime, time))
+                if(HistoryDb.insertData(age, gender, numberOfWarts, typeOfWart, surfaceAreaOfWart, indurationDiameterOfWart, dateAndTime, time, rsult))
                     Toast.makeText(SecondActivity.this, "Results saved successfully!", Toast.LENGTH_LONG).show();
                 saveBtn.setEnabled(false);
             }
@@ -563,6 +563,7 @@ public class SecondActivity extends AppCompatActivity {
                     + "\nType of Warts: " + res.getString(res.getColumnIndex("typeOfWarts"))
                     + "\nSurface Area: " + res.getInt(res.getColumnIndex("surfaceArea"))
                     + "\nInduration diameter: " + res.getInt(res.getColumnIndex("indurationDiameter"))
+                    + "\nResult: " + res.getString(res.getColumnIndex("result"))
                     + "\n\n______________________________________\n\n");
                     res.moveToNext();
                 }
