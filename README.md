@@ -4,10 +4,12 @@ method for their patients. Based on the given information about the patient - ag
 number of warts, type of warts, surface area of the biggest wart and induration diameter of initial test - the app 
 predicts the result of the of the treatment.
 
+Predictions are based on a model (decision tree) trained using J48 algorthm with 10-fold cross-validation and ["Weka 3: Machine Learning Software in Java"](https://www.cs.waikato.ac.nz/ml/weka/).
+
 ### Download the APK
 for Android 4.3 Jelly Bean or newer version [here](https://github.com/p17griv/wart-immunotherapy-prediction-app/blob/master/wart_immunotherapy_prediction.apk).
 
-![Image of the App](https://github.com/p17griv/wart-immunotherapy-prediction-app/blob/master/app_sample.png)
+![Image of the App](https://github.com/p17griv/wart-immunotherapy-prediction-app/blob/master/imgs/app_sample.png)
 
 #### Dataset
 used for training and testing the model: https://archive.ics.uci.edu/ml/datasets/Immunotherapy+Dataset
@@ -21,9 +23,9 @@ The app's accuracy is 76.3% and is correctly predicting A* 68.4% and B** 84.2% o
 
 **Immunotherapy is not the right method cases.
 
---------------------------------------------------------
+![J48 Results](https://github.com/p17griv/wart-immunotherapy-prediction-app/blob/master/imgs/j48_balanced.png)
 
-##### Made by:
-Pashalis Grivas - 
-p17griv@ionio.gr - 
-All rights reserved
+
+## License
+
+See the [LICENSE](LICENSE) file for license rights and limitations (MIT).
