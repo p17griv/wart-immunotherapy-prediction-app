@@ -4,7 +4,7 @@ method for their patients. Based on the given information about the patient - ag
 number of warts, type of warts, surface area of the biggest wart and induration diameter of initial test - the app 
 predicts the result of the of the treatment.
 
-Predictions are based on a model (decision tree) trained using J48 algorthm with 10-fold cross-validation and ["Weka 3: Machine Learning Software in Java"](https://www.cs.waikato.ac.nz/ml/weka/).
+Predictions are based on a model (decision tree) trained using J48 algorithm with 10-fold cross-validation and ["Weka 3: Machine Learning Software in Java"](https://www.cs.waikato.ac.nz/ml/weka/).
 
 The dataset that used for training and testing the model can be found [here](https://archive.ics.uci.edu/ml/datasets/Immunotherapy+Dataset).
 
