@@ -8,6 +8,7 @@ Predictions are based on a model (decision tree) trained using J48 algorthm with
 
 The dataset that used for training and testing the model can be found [here](https://archive.ics.uci.edu/ml/datasets/Immunotherapy+Dataset).
 
+[Report](https://github.com/p17griv/wart-immunotherapy-prediction-app/blob/master/report.pdf) (Greek)
 ---
 
 ### Download the APK
