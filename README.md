@@ -1,12 +1,12 @@
 ## Wart Immunotherapy Prediction App
-"Wart Immunotherapy Prediction App" is a medical decision support system helping doctors decide whether Immunotherapy is the right treatment 
-method for their patients. Based on the given information about the patient - age, gender, time before treatment,
-number of warts, type of warts, surface area of the biggest wart and induration diameter of initial test - the app 
-predicts the result of the of the treatment.
+"Wart Immunotherapy Prediction App" is a medical Decision Support System (DSS) helping doctors decide whether Immunotherapy is the right treatment method for their patients. Based on the given information about the patient - age, gender, time before treatment, number of warts, type of warts, surface area of the biggest wart and induration diameter of initial test - the app
+predicts the result of the treatment.
 
-Predictions are based on a model (decision tree) trained using J48 algorithm with 10-fold cross-validation and ["Weka 3: Machine Learning Software in Java"](https://www.cs.waikato.ac.nz/ml/weka/).
+Predictions are based on a model (decision tree) trained using J48 classification algorithm with 10-fold cross-validation and ["Weka 3: Machine Learning Software in Java"](https://www.cs.waikato.ac.nz/ml/weka/).
 
 The dataset that used for training and testing the model can be found [here](https://archive.ics.uci.edu/ml/datasets/Immunotherapy+Dataset).
+
+This is a student project for "Decision Support Systems" course of department of Informatics - Ionian University.
 
 **[Report](https://github.com/p17griv/wart-immunotherapy-prediction-app/blob/master/report.pdf)** (Greek)
 
